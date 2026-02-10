@@ -1,0 +1,110 @@
+name: Bug Report
+description: Report a bug to help us improve
+title: "[BUG] "
+labels: ["bug"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the information below.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Bug Summary
+      description: A brief summary of the bug.
+      placeholder: e.g. App crashes when clicking the submit button
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: List the steps to reproduce the bug.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How severe is this bug?
+      options:
+        - Critical - App is unusable
+        - High - Major feature is broken
+        - Medium - Feature works but with issues
+        - Low - Minor inconvenience
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      description: What OS are you using?
+      multiple: true
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - iOS
+        - Android
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: What version of the project are you using?
+      placeholder: e.g. 1.0.0
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots to help explain the problem.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Please confirm the following before submitting.
+      options:
+        - label: I have searched for existing issues that describe this bug.
+          required: true
+        - label: I have provided all the required information above.
+          required: true
+        - label: I am willing to submit a PR to fix this issue.
+          required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other information or context about the problem.
